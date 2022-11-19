@@ -1,0 +1,20 @@
+{
+  "name": "cypress-e2e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open",
+    "headless":"npx cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "testing"
+  ],
+  "author": "Aftab",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.7.0"
+  },
+  "dependencies": {}
+}

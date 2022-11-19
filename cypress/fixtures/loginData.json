@@ -1,0 +1,13 @@
+{
+  "validCredentials": {
+    "userName": "aftab",
+    "password": "Tester123!"
+  },
+  "invalidCredentials": {
+    "userName": "aftab",
+    "password": "aftab123"
+  },
+  "emptyPassword": {
+    "userName": "aftab"
+  }
+}
