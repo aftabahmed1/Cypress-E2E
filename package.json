@@ -6,12 +6,12 @@
   "scripts": {
     "delete:reports": "rm -r cypress/results/* || true",
     "prereport": "npm run delete:reports",
-    "headed":"npm run prereport && npx cypress run --headed",
+    "headed": "npm run prereport && npx cypress run --headed",
     "headless": "npm run prereport && npx cypress run",
-    "mochawesome:merge":"npx mochawesome-merge \"cypress/results/mochawesome/*.json\" > mochawesome.json && npx marge mochawesome.json",
-    "junit:merge":"npx junit-merge -d cypress/results/junit -o cypress/results/junit/result.xml",
-    "cypress:e2e":"npm run headless; npm run junit:merge; npm run mochawesome:merge",
-    "cypress:headed":"npm run headed; npm run junit:merge; npm run mochawesome:merge"
+    "mochawesome:merge": "npx mochawesome-merge \"cypress/results/mochawesome/*.json\" > mochawesome.json && npx marge mochawesome.json",
+    "junit:merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/result.xml",
+    "cypress:e2e": "npm run headless; npm run junit:merge; npm run mochawesome:merge",
+    "cypress:headed": "npm run headed; npm run junit:merge; npm run mochawesome:merge"
   },
   "author": "Aftab",
   "license": "ISC",
