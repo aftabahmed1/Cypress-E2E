@@ -1,20 +1,20 @@
-Steps to run the Cypress tests:
+# Steps to run the Cypress tests:
 
 1) Run the following command on terminal to run with docker-compose.
 
-docker-compose up -d --build
+**docker-compose up -d --build**
 
 2) If you want to run test cases manually in headless mode please run the following command on terminal.
 
-npm run cypress:e2e
+**npm run cypress:e2e**
 
 3) If you want to run and watch test running in headed mode, execute following command.
 
-npm run cypress:headed 
+**npm run cypress:headed**
 
-*****************/        Test Scenario's        /**************************
+# Test Scenario's
 
-Feature: Login Functionality
+### Feature: Login Functionality
 
     Scenario: login successfully
         Given I am on login page
@@ -54,7 +54,7 @@ Feature: Login Functionality
         Then I should be navigated to forgotPassword page
 
 
-Feature: Movies API GET ALL top-rated movies & POST give rating to movies
+### Feature: Movies API GET ALL top-rated movies & POST give rating to movies
 
     Scenario: GET top rated movies with default page successfully
         Given I have correct api_key
