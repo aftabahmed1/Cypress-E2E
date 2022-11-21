@@ -1,0 +1,7 @@
+{
+    "topRated":{
+        "pageMin":1,
+        "pageMax":500,
+        "pageZero": 0
+    }
+}

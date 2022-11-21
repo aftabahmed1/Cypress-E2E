@@ -1,0 +1,201 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-11-21T02:08:18.521Z",
+    "end": "2022-11-21T02:09:31.150Z",
+    "duration": 72629,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2c62133c-4465-408a-860b-620df4281736",
+      "title": "",
+      "fullFile": "cypress/e2e/login.cy.js",
+      "file": "cypress/e2e/login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7e9d03be-3e17-476e-8cac-843529dc7297",
+          "title": "Login Functionality Testing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Logins successfully with correct credentials",
+              "fullTitle": "Login Functionality Testing Logins successfully with correct credentials",
+              "timedOut": null,
+              "duration": 13793,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(loginData.validCredentials).then(() => {\n  _loginPage.loginPage.verifySuccessPath();\n});",
+              "err": {},
+              "uuid": "2db8de9f-72ec-4b38-b8e7-960ef07afacf",
+              "parentUUID": "7e9d03be-3e17-476e-8cac-843529dc7297",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login not allowed with Incorrect credentials",
+              "fullTitle": "Login Functionality Testing Login not allowed with Incorrect credentials",
+              "timedOut": null,
+              "duration": 7934,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(loginData.invalidCredentials).then(() => {\n  _loginPage.loginPage.verifyFailMessage();\n});",
+              "err": {},
+              "uuid": "f16ac15e-bcd0-42cb-b01f-9a30816db442",
+              "parentUUID": "7e9d03be-3e17-476e-8cac-843529dc7297",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Logout successfully",
+              "fullTitle": "Login Functionality Testing Logout successfully",
+              "timedOut": null,
+              "duration": 17460,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(loginData.validCredentials).then(() => {\n  _loginPage.loginPage.verifySuccessPath();\n});\ncy.logOut().then(() => {\n  _loginPage.loginPage.verifyLogout();\n});",
+              "err": {},
+              "uuid": "6df11d7e-f6e3-427c-96e7-6715a42c772b",
+              "parentUUID": "7e9d03be-3e17-476e-8cac-843529dc7297",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with EmptyPassword",
+              "fullTitle": "Login Functionality Testing Login with EmptyPassword",
+              "timedOut": null,
+              "duration": 6300,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.loginEmptyPassword(loginData.emptyPassword).then(() => {\n  _loginPage.loginPage.verifyEmptyPasswordMessage();\n});",
+              "err": {},
+              "uuid": "257e328d-713b-403c-a2cd-b11d22de7b2c",
+              "parentUUID": "7e9d03be-3e17-476e-8cac-843529dc7297",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should Logout successfully and click browser back button not allowing to login back",
+              "fullTitle": "Login Functionality Testing Should Logout successfully and click browser back button not allowing to login back",
+              "timedOut": null,
+              "duration": 20409,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(loginData.validCredentials).then(() => {\n  _loginPage.loginPage.verifySuccessPath();\n});\ncy.logOut().then(() => {\n  _loginPage.loginPage.verifyLogout();\n});\ncy.go('back');\ncy.url().should('not.contain', '/account/dashboard/');",
+              "err": {},
+              "uuid": "caf5bd93-0e12-4107-a591-c020b8ecef45",
+              "parentUUID": "7e9d03be-3e17-476e-8cac-843529dc7297",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify forgot password link working",
+              "fullTitle": "Login Functionality Testing Verify forgot password link working",
+              "timedOut": null,
+              "duration": 5120,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.loginPage.verifyForgotPasswordLink();",
+              "err": {},
+              "uuid": "ebb6b481-ee32-44c4-8864-9322ae26a17b",
+              "parentUUID": "7e9d03be-3e17-476e-8cac-843529dc7297",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2db8de9f-72ec-4b38-b8e7-960ef07afacf",
+            "f16ac15e-bcd0-42cb-b01f-9a30816db442",
+            "6df11d7e-f6e3-427c-96e7-6715a42c772b",
+            "257e328d-713b-403c-a2cd-b11d22de7b2c",
+            "caf5bd93-0e12-4107-a591-c020b8ecef45",
+            "ebb6b481-ee32-44c4-8864-9322ae26a17b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 71016,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

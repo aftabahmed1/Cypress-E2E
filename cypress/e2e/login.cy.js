@@ -5,6 +5,11 @@ describe("Login Functionality Testing",()=>{
     beforeEach(() => {
         cy.visit('/')
         cy.intercept('GET', '**/access-tokens/*').as('loginSuccess')
+        Cypress.on('uncaught:exception', (err, runnable) => {
+            // returning false here prevents Cypress from
+            // failing the test
+            return false
+        })
       });
       it('Logins successfully with correct credentials', () => {
         cy.login(loginData.validCredentials).then(()=>{

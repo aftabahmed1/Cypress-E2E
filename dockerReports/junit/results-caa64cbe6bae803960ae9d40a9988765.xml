@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.449" tests="9" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-11-21T02:08:11" tests="0" file="cypress/e2e/apiMovies.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Testing GET top-rated Movies API" timestamp="2022-11-21T02:08:11" tests="5" time="1.460" failures="0">
+    <testcase name="Testing GET top-rated Movies API GET top rated movies with default page 1 result" time="0.407" classname="GET top rated movies with default page 1 result">
+    </testcase>
+    <testcase name="Testing GET top-rated Movies API Should display error message code 401 GET top rated movies with incorrect api_key" time="0.267" classname="Should display error message code 401 GET top rated movies with incorrect api_key">
+    </testcase>
+    <testcase name="Testing GET top-rated Movies API Should not GET top rated movies with page=0" time="0.264" classname="Should not GET top rated movies with page=0">
+    </testcase>
+    <testcase name="Testing GET top-rated Movies API Should GET top rated movies with max page" time="0.084" classname="Should GET top rated movies with max page">
+    </testcase>
+    <testcase name="Testing GET top-rated Movies API Should GET top rated movies with random page between 1-500" time="0.412" classname="Should GET top rated movies with random page between 1-500">
+    </testcase>
+  </testsuite>
+  <testsuite name="Testing POST rate-Movies API tests" timestamp="2022-11-21T02:08:13" tests="4" time="1.911" failures="0">
+    <testcase name="Testing POST rate-Movies API tests POST rate movies with random movieId everytime" time="0.349" classname="POST rate movies with random movieId everytime">
+    </testcase>
+    <testcase name="Testing POST rate-Movies API tests POST with incorrect movieId reponse code should be 404" time="0.525" classname="POST with incorrect movieId reponse code should be 404">
+    </testcase>
+    <testcase name="Testing POST rate-Movies API tests POST without token then reponse code should be 401" time="0.499" classname="POST without token then reponse code should be 401">
+    </testcase>
+    <testcase name="Testing POST rate-Movies API tests POST with incorrect rating not multiple of 0.5 then reponse code should be 400" time="0.521" classname="POST with incorrect rating not multiple of 0.5 then reponse code should be 400">
+    </testcase>
+  </testsuite>
+</testsuites>

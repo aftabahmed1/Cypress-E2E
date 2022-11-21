@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="72.629" tests="6" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-11-21T02:08:18" tests="0" file="cypress/e2e/login.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Login Functionality Testing" timestamp="2022-11-21T02:08:18" tests="6" time="72.583" failures="0">
+    <testcase name="Login Functionality Testing Logins successfully with correct credentials" time="13.793" classname="Logins successfully with correct credentials">
+    </testcase>
+    <testcase name="Login Functionality Testing Login not allowed with Incorrect credentials" time="7.934" classname="Login not allowed with Incorrect credentials">
+    </testcase>
+    <testcase name="Login Functionality Testing Logout successfully" time="17.460" classname="Logout successfully">
+    </testcase>
+    <testcase name="Login Functionality Testing Login with EmptyPassword" time="6.300" classname="Login with EmptyPassword">
+    </testcase>
+    <testcase name="Login Functionality Testing Should Logout successfully and click browser back button not allowing to login back" time="20.409" classname="Should Logout successfully and click browser back button not allowing to login back">
+    </testcase>
+    <testcase name="Login Functionality Testing Verify forgot password link working" time="5.120" classname="Verify forgot password link working">
+    </testcase>
+  </testsuite>
+</testsuites>
