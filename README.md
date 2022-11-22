@@ -2,11 +2,11 @@
 
 1) Run the following command on terminal to run with docker-compose.
 
-**docker-compose up -d --build**
+**docker-compose up --build**
 
 2) If you want to run test cases manually in headless mode please run the following command on terminal.
 
-**npm run cypress:e2e**
+**npm install && npm run cypress:e2e**
 
 3) If you want to run and watch test running in headed mode, execute following command.
 
@@ -95,11 +95,3 @@
         Given I have correct api_key, valid token, valid movieId
         And I send request to POST API with rating value=7.4
         Then I should receive error message of not multiple of 0.5 in response with response code 400
-
-
-    
-
-
-
-
-

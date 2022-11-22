@@ -1,0 +1,12 @@
+config:
+  target: "https://api.themoviedb.org/3"
+  phases:
+    - duration: 30
+      arrivalRate: 10
+      name: "Load-Test Movie-Rate API"
+scenarios:
+  - flow:
+    - get:
+        url: "/movie/top_rated"
+        qs:
+          api_key: "bc4572da1285e968946fe454c434a518"

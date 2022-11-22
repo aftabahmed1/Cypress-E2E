@@ -19,6 +19,10 @@ import addContext from "mochawesome/addContext"
 
 // Alternatively you can use CommonJS syntax:
 //require('./commands')
+
+/**
+ * Event logic for taking screenshot logic for failure specs cases to be attached in mochawesome report
+ */
 Cypress.on("test:after:run", (test, runnable) => {  
     if (test.state === "failed") {    
       const screenshot =`${Cypress.spec.name}/${runnable.parent.title} -- ${test.title} (failed).png`;    

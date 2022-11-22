@@ -4,18 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "loadTest": "artillery run load-test.yml",
     "delete:reports": "rm -r cypress/results/* || true",
     "prereport": "npm run delete:reports",
     "headed": "npm run prereport && npx cypress run --headed",
     "headless": "npm run prereport && npx cypress run",
     "mochawesome:merge": "npx mochawesome-merge \"cypress/results/mochawesome/*.json\" > mochawesome.json && npx marge mochawesome.json",
     "junit:merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/result.xml",
-    "cypress:e2e": "npm run headless; npm run junit:merge; npm run mochawesome:merge",
+    "cypress:e2e": "npm run headless; npm run junit:merge; npm run mochawesome:merge; npm run loadTest",
     "cypress:headed": "npm run headed; npm run junit:merge; npm run mochawesome:merge"
   },
   "author": "Aftab",
   "license": "ISC",
   "devDependencies": {
+    "artillery": "^2.0.0-16",
     "cypress": "^10.7.0",
     "cypress-multi-reporters": "^1.6.1",
     "junit-merge": "^2.0.0",
