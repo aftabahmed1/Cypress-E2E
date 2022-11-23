@@ -9,7 +9,6 @@ jobs:
         run: |
           echo "Hello from this API, $TEST_SECRET"
           echo "Hello from this API, $TEST_ONE"
-          echo "Hello From APIURLONE, ${{ secrets.APIURLONE }}
         env:
           TEST_SECRET: ${{ secrets.APIURL }}
           TEST_ONE: helloWorld
