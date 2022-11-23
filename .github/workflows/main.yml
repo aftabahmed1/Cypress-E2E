@@ -3,7 +3,7 @@ on: [push]
 jobs:
   cypress-run:
     env: 
-      TESTING: ${{secrets.APIURL}}
+      TESTING: ${{secrets.APIURLONE}}
     runs-on: ubuntu-20.04
     name: Cypress E2E Tests
     steps:
@@ -11,6 +11,7 @@ jobs:
         run: |
           echo "Hello from this API, $TEST_ONE"
           echo "Hello From APIURLONE, $TESTING"
+          echo "HEllo From SEC ${{secrets.APIURLONE}}"
         env:
           TEST_ONE: helloWorld
       - uses: actions/checkout@v2
