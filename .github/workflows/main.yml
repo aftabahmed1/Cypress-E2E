@@ -5,8 +5,16 @@ jobs:
     runs-on: ubuntu-20.04
     name: Cypress E2E Tests
     steps:
-      - run: echo "Hello from this API, ${APIURL}"
       - uses: actions/checkout@v2
       - uses: cypress-io/github-action@v4
         with:
          browser: chrome
+      - name: Test
+        run: |
+          echo "Hello from this API, $TEST_SECRET"
+          echo "Hello from this API, $TEST_ONE"
+          echo "Hello From APIURLONE, ${{ secrets.APIURLONE }}
+        env:
+          TEST_SECRET: ${{ secrets.APIURL }}
+          TEST_ONE: "hello"
+       
