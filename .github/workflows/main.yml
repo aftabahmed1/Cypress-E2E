@@ -2,18 +2,9 @@ name: Cypress E2E Tests
 on: [push]
 jobs:
   cypress-run:
-    env: 
-      TESTING: ${{secrets.APIURLONE}}
     runs-on: ubuntu-20.04
     name: Cypress E2E Tests
     steps:
-      - name: Test
-        run: |
-          echo "Hello from this API, $TEST_ONE"
-          echo "Hello From APIURLONE, $TESTING"
-          echo "HEllo From SEC ${{secrets.APIURLONE}}"
-        env:
-          TEST_ONE: helloWorld
       - uses: actions/checkout@v2
       - uses: cypress-io/github-action@v4
         with:
