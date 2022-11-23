@@ -10,7 +10,7 @@ jobs:
       - name: Test
         run: |
           echo "Hello from this API, $TEST_ONE"
-          echo "Hello From APIURLONE, $TESTING
+          echo "Hello From APIURLONE, $TESTING"
         env:
           TEST_ONE: helloWorld
       - uses: actions/checkout@v2
