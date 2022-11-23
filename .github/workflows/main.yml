@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-20.04
     name: Cypress E2E Tests
     steps:
-      - run: echo "Hello from this API, $apiUrl"
+      - run: echo "Hello from this API, ${{secrets.APIURL}}"
       - uses: actions/checkout@v2
       - uses: cypress-io/github-action@v4
         with:
