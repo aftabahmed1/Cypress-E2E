@@ -12,6 +12,10 @@
 
 **npm run cypress:headed**
 
+4) If you want to run specific test case for e.g with following command to run API spec only
+
+**npx cypress run --spec "cypress/e2e/apiMovies.cy.js"**
+
 # Test Scenario's
 
 ### Feature: Login Functionality

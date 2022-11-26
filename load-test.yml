@@ -9,4 +9,4 @@ scenarios:
     - get:
         url: "/movie/top_rated"
         qs:
-          api_key: "bc4572da1285e968946fe454c434a518"
+          api_key: ${{ secrets.API_KEY }}
