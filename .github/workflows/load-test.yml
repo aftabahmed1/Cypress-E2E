@@ -16,4 +16,4 @@ jobs:
           
 
       - name: Execute load tests
-        run:  npm run loadTest
+      - run:  npm run loadTest
