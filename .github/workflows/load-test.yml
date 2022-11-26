@@ -1,19 +1,14 @@
 name: Load Test
-
 on: [push]
-
 jobs:
   artillery:
     runs-on: ubuntu-20.04
+    name: load-test
     steps:
-      - name: load test
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 14.16.0
       - run: npm install
       - run: npm i artillery@2.0.0-16 --save-dev
-          
-
-      - name: Execute load tests
       - run:  npm run loadTest
