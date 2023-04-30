@@ -99,3 +99,4 @@
         Given I have correct api_key, valid token, valid movieId
         And I send request to POST API with rating value=7.4
         Then I should receive error message of not multiple of 0.5 in response with response code 400
+        
